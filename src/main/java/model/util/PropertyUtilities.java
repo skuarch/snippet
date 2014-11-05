@@ -67,7 +67,7 @@ public class PropertyUtilities {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public String getStringPropertie(String key) throws FileNotFoundException, IOException {
+    public String getStringProperty(String key) throws FileNotFoundException, IOException {
 
         if (fileProperties == null || fileProperties.length() < 1) {
             throw new NullPointerException("fileProperties is null or empty");
@@ -113,9 +113,9 @@ public class PropertyUtilities {
 
     //==========================================================================
     /**
-     * append a property in the file.
+     * append a property into the file.
      */
-    public void putPropertie(Object key, Object value) throws IOException {
+    public void putProperty(Object key, Object value) throws IOException {
 
         Properties properties = null;
 
@@ -135,7 +135,7 @@ public class PropertyUtilities {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public int getIntPropertie(String key) throws FileNotFoundException, IOException {
+    public int getIntProperty(String key) throws FileNotFoundException, IOException {
 
         if (fileProperties == null || fileProperties.length() < 1) {
             throw new NullPointerException("fileProperties is null or empty");
@@ -161,7 +161,7 @@ public class PropertyUtilities {
      * @throws FileNotFoundException
      * @throws IOException 
      */
-    public short getShortPropertie(String key) throws FileNotFoundException, IOException {
+    public short getShortProperty(String key) throws FileNotFoundException, IOException {
 
         if (fileProperties == null || fileProperties.length() < 1) {
             throw new NullPointerException("fileProperties is null or empty");
@@ -185,7 +185,7 @@ public class PropertyUtilities {
      *
      * @param inputStream
      */
-    private static void closeInputStream(InputStream inputStream) {
+    private static void closeInputStream(InputStream inputStream) throws IOException {
 
         try {
 
@@ -194,7 +194,7 @@ public class PropertyUtilities {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throws e;
         }
 
     } // end closeInputStream
@@ -205,7 +205,7 @@ public class PropertyUtilities {
      *
      * @param inputStream
      */
-    private static void closeOutputStream(OutputStream outputStream) {
+    private static void closeOutputStream(OutputStream outputStream) throws IOException {
 
         try {
 
@@ -214,7 +214,7 @@ public class PropertyUtilities {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throws e;
         }
 
     } // end closeInputStream
