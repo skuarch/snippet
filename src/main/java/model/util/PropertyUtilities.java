@@ -147,7 +147,7 @@ public class PropertyUtilities {
 
         int value;
 
-        value = Integer.parseInt(getStringPropertie(key));
+        value = Integer.parseInt(getStringProperty(key));
 
         return value;
 
@@ -173,7 +173,7 @@ public class PropertyUtilities {
 
         short value;
 
-        value = Short.parseShort(getStringPropertie(key));        
+        value = Short.parseShort(getStringProperty(key));        
 
         return value;
 
@@ -194,7 +194,7 @@ public class PropertyUtilities {
             }
 
         } catch (IOException e) {
-            throws e;
+            throw e;
         }
 
     } // end closeInputStream
@@ -214,7 +214,7 @@ public class PropertyUtilities {
             }
 
         } catch (IOException e) {
-            throws e;
+            throw e;
         }
 
     } // end closeInputStream
